@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Color Palette from Photo -->
+    <color name="forest_leaf">#234E1D</color>
+    <color name="golden_sunflower">#FFBA36</color>
+    <color name="fresh_meadow">#A2D35A</color>
+    <color name="terracota_bloom">#D74B13</color>
+    <color name="blossom_petal">#F8D7E3</color>
+    <color name="rich_soil">#543213</color>
+
+    <!-- App Theme References -->
+    <color name="green_primary">@color/forest_leaf</color>
+    <color name="copper_brown">#C08A5E</color>
+    <color name="grey_text">#757575</color>
+    <color name="grey_input_hint">#8E8E93</color>
+</resources>

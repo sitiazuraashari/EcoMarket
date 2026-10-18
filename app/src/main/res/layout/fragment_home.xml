@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Profile Greeting Header -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Welcome Back"
+            android:textColor="@color/grey_text"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Azura"
+            android:textColor="@color/rich_soil"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+
+        <!-- Banner Promo Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBanner"
+            android:layout_width="0dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProfile">
+
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Banner Promo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tombol / Card Tips Belanja EcoMarket -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTips"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#285C2B"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardBanner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Tips Icon"
+                    android:src="@drawable/ic_message"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="💡 Tips Belanja Barang Bekas"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Buka >"
+                    android:textColor="#FFBA36"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Kategori Title -->
+        <TextView
+            android:id="@+id/txtKategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Kategori"
+            android:textColor="@color/forest_leaf"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardTips" />
+
+        <!-- Category Buttons using Palette Colors with Pill Radius -->
+        <LinearLayout
+            android:id="@+id/layoutKategori"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtKategori">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFashion"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="Fashion"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:backgroundTint="@color/forest_leaf"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuku"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="Buku"
+                android:textAllCaps="false"
+                android:textColor="@color/rich_soil"
+                android:textSize="13sp"
+                app:backgroundTint="@color/golden_sunflower"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRumah"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="Rumah"
+                android:textAllCaps="false"
+                android:textColor="@color/rich_soil"
+                android:textSize="13sp"
+                app:backgroundTint="@color/blossom_petal"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+        <!-- Produk Terbaru Title -->
+        <TextView
+            android:id="@+id/txtProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Produk Terbaru"
+            android:textColor="@color/forest_leaf"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutKategori" />
+
+        <!-- Row 1: Tas Bekas & Novel -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTas"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toStartOf="@id/cardNovel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtProduk">
+
+            <ImageView
+                android:id="@+id/imgTas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Tas Bekas"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tas" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtTas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Tas Bekas"
+            android:textColor="@color/rich_soil"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cardTas"
+            app:layout_constraintTop_toBottomOf="@id/cardTas" />
+
+        <TextView
+            android:id="@+id/txtHargaTas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Rp50.000"
+            android:textColor="@color/terracota_bloom"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txtTas"
+            app:layout_constraintTop_toBottomOf="@id/txtTas" />
+
+        <TextView
+            android:id="@+id/txtRatingTas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="★ 4.8"
+            android:textColor="@color/rich_soil"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/txtHargaTas"
+            app:layout_constraintTop_toBottomOf="@id/txtHargaTas" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardNovel"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardTas"
+            app:layout_constraintTop_toTopOf="@id/cardTas">
+
+            <ImageView
+                android:id="@+id/imgNovel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Novel"
+                android:scaleType="centerCrop"
+                android:src="@drawable/novel" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtNovel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Novel"
+            android:textColor="@color/rich_soil"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cardNovel"
+            app:layout_constraintTop_toBottomOf="@id/cardNovel" />
+
+        <TextView
+            android:id="@+id/txtHargaNovel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Rp25.000"
+            android:textColor="@color/terracota_bloom"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txtNovel"
+            app:layout_constraintTop_toBottomOf="@id/txtNovel" />
+
+        <TextView
+            android:id="@+id/txtRatingNovel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="★ 4.7"
+            android:textColor="@color/rich_soil"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/txtHargaNovel"
+            app:layout_constraintTop_toBottomOf="@id/txtHargaNovel" />
+
+        <!-- Row 2: Kursi & Meja -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardKursi"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toStartOf="@id/cardMeja"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRatingTas">
+
+            <ImageView
+                android:id="@+id/imgKursi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Kursi Kayu"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kursi" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtKursi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Kursi Kayu"
+            android:textColor="@color/rich_soil"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cardKursi"
+            app:layout_constraintTop_toBottomOf="@id/cardKursi" />
+
+        <TextView
+            android:id="@+id/txtHargaKursi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Rp80.000"
+            android:textColor="@color/terracota_bloom"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txtKursi"
+            app:layout_constraintTop_toBottomOf="@id/txtKursi" />
+
+        <TextView
+            android:id="@+id/txtRatingKursi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="★ 4.6"
+            android:textColor="@color/rich_soil"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/txtHargaKursi"
+            app:layout_constraintTop_toBottomOf="@id/txtHargaKursi" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMeja"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardKursi"
+            app:layout_constraintTop_toTopOf="@id/cardKursi">
+
+            <ImageView
+                android:id="@+id/imgMeja"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Meja Belajar"
+                android:scaleType="centerCrop"
+                android:src="@drawable/meja" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtMeja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Meja Belajar"
+            android:textColor="@color/rich_soil"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cardMeja"
+            app:layout_constraintTop_toBottomOf="@id/cardMeja" />
+
+        <TextView
+            android:id="@+id/txtHargaMeja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Rp150.000"
+            android:textColor="@color/terracota_bloom"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txtMeja"
+            app:layout_constraintTop_toBottomOf="@id/txtMeja" />
+
+        <TextView
+            android:id="@+id/txtRatingMeja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="★ 4.9"
+            android:textColor="@color/rich_soil"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/txtHargaMeja"
+            app:layout_constraintTop_toBottomOf="@id/txtHargaMeja" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

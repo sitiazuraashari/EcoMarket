@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="28dp"
+    android:paddingTop="48dp"
+    android:paddingBottom="24dp"
+    tools:context=".LoginActivity">
+
+    <!-- Header Title -->
+
+    <!-- Username / Email Input Card -->
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins_bold"
+        android:lineSpacingExtra="2dp"
+        android:text="Welcome\nBack!"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/cardEmail"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_input_field"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome">
+
+        <ImageView
+            android:id="@+id/imgemail"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_person"
+            app:tint="#666666" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Username or Email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey_input_hint"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Password Input Card -->
+    <LinearLayout
+        android:id="@+id/cardPassword"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_input_field"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardEmail">
+
+        <ImageView
+            android:id="@+id/imgpassword"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_lock"
+            app:tint="#666666" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey_input_hint"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgmataPassword"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_eye"
+            app:tint="#666666" />
+
+    </LinearLayout>
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/imgforgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Forgot Password?"
+        android:textColor="@color/copper_brown"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardPassword" />
+
+    <!-- Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@color/green_primary"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgforgot" />
+
+    <!-- OR Divider Text -->
+    <TextView
+        android:id="@+id/txtOrContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="- OR Continue with -"
+        android:textColor="@color/grey_text"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <!-- Social Login Buttons -->
+    <LinearLayout
+        android:id="@+id/layoutSocialButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtOrContinue">
+
+        <!-- Google -->
+        <ImageView
+            android:id="@+id/btnGoogle"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_social_circle"
+            android:clickable="true"
+            android:contentDescription="Google Login"
+            android:focusable="true"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_google" />
+
+        <!-- Apple -->
+        <ImageView
+            android:id="@+id/btnApple"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_social_circle"
+            android:clickable="true"
+            android:contentDescription="Apple Login"
+            android:focusable="true"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_apple" />
+
+        <!-- Facebook -->
+        <ImageView
+            android:id="@+id/btnFacebook"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_social_circle"
+            android:clickable="true"
+            android:contentDescription="Facebook Login"
+            android:focusable="true"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_facebook" />
+
+    </LinearLayout>
+
+    <!-- Footer Sign Up Text -->
+    <LinearLayout
+        android:id="@+id/layoutSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSocialButtons">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Create An Account "
+            android:textColor="@color/grey_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Sign Up"
+            android:textColor="@color/copper_brown"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
