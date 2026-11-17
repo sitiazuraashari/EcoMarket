@@ -1,4 +1,3 @@
-
 package com.example.azura_project
 
 import android.content.Intent
@@ -9,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.azura_project.databinding.ActivityLoginBinding
-import com.example.azura_project.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,14 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            val density = resources.displayMetrics.density
-            val horizontalPadding = (28 * density).toInt()
-            v.setPadding(
-                systemBars.left + horizontalPadding,
-                systemBars.top,
-                systemBars.right + horizontalPadding,
-                systemBars.bottom
-            )
+            v.setPadding(0, 0, 0, systemBars.bottom)
             insets
         }
 

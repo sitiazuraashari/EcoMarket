@@ -1,4 +1,4 @@
-package com.example.azura_project
+package com.example.azura_project.Message
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.bumptech.glide.Glide
+import com.example.azura_project.R
 import com.example.azura_project.databinding.ItemMessageBinding
 import com.google.android.material.snackbar.Snackbar
 

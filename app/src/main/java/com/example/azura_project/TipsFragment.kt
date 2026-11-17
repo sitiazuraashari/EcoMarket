@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.SimpleAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.azura_project.Home.HomeFragment
 import com.example.azura_project.databinding.FragmentTipsBinding
 
 class TipsFragment : Fragment() {

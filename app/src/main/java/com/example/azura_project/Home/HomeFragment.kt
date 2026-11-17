@@ -1,4 +1,4 @@
-package com.example.azura_project
+package com.example.azura_project.Home
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.azura_project.CatalogActivity
+import com.example.azura_project.Kategori.BukuFragment
+import com.example.azura_project.DetailActivity
+import com.example.azura_project.Kategori.FashionFragment
+import com.example.azura_project.MainActivity
+import com.example.azura_project.R
+import com.example.azura_project.Kategori.RumahFragment
+import com.example.azura_project.TipsFragment
+import com.example.azura_project.WebActivity
 import com.example.azura_project.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -24,6 +33,29 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Banner Promo & Button -> Open Web Article
+        val openWebArticle = View.OnClickListener {
+            val intent = Intent(requireContext(), WebActivity::class.java).apply {
+                putExtra(
+                    WebActivity.EXTRA_URL,
+                    "https://bpd.telkomuniversity.ac.id/17-ide-kerajinan-barang-bekas-ubah-sampah-jadi-karya/"
+                )
+                putExtra(
+                    WebActivity.EXTRA_TITLE,
+                    "Ide Kerajinan Barang Bekas"
+                )
+            }
+            startActivity(intent)
+        }
+
+        binding.cardBanner.setOnClickListener(openWebArticle)
+        binding.btnBannerMulai.setOnClickListener(openWebArticle)
+
+        // Catalog Button -> Open CatalogActivity (TabLayout & ViewPager2 & RecyclerView)
+        binding.cardCatalog.setOnClickListener {
+            startActivity(Intent(requireContext(), CatalogActivity::class.java))
+        }
 
         // Tips Belanja Button
         binding.cardTips.setOnClickListener {

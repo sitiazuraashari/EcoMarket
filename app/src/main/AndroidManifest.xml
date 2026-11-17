@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".tutorial.TutorialMessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
@@ -31,7 +34,13 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".CatalogActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebActivity"
             android:exported="false" />
     </application>
 

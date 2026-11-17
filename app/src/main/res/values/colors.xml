@@ -3,6 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Dots Indicator Colors -->
+    <color name="abu_gelap">#88A885</color>
+    <color name="dot_selected">#FFFFFF</color>
+
     <!-- Color Palette from Photo -->
     <color name="forest_leaf">#234E1D</color>
     <color name="golden_sunflower">#FFBA36</color>

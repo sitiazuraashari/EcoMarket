@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.azura_project.Home.HomeFragment
+import com.example.azura_project.Message.MessageFragment
+import com.example.azura_project.Profile.ProfileFragment
 import com.example.azura_project.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

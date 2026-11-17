@@ -1,4 +1,4 @@
-package com.example.azura_project
+package com.example.azura_project.Profile
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import com.example.azura_project.LoginActivity
+import com.example.azura_project.MainActivity
 import com.example.azura_project.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
